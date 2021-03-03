@@ -33,8 +33,6 @@ mongoose.connect(atlasUrl, {
 
 const db = mongoose.connection;
 
-console.log(db, "To jest db");
-
 mongoose.connection.on("error", (err) => {
   console.log(err, "to jest error mongo");
 });
@@ -64,7 +62,7 @@ app.disable("x-powered-by");
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:3000",
+    origin: "https://whispering-wave-19363.herokuapp.com",
   })
 );
 app.use(express.json());

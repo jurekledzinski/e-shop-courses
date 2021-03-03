@@ -7,8 +7,7 @@ const { ErrorHandler } = require("../errors/error");
 
 router.put("/", isLoggedIn, (req, res, next) => {
   const { userId, cart, totalQtyCart, totalPriceCart } = req.body;
-  console.log(req, " Cart request backend");
-  console.log(req.body, " Cart req.body backend");
+
   let info = {
     alert: "",
   };
