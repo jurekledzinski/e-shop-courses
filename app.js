@@ -68,9 +68,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
-if (app.get("env") === "production") {
-  app.set("trust proxy", 1);
-}
+app.set("trust proxy", 1);
+
 app.use(
   session({
     name: sessionName,
@@ -84,8 +83,8 @@ app.use(
     cookie: {
       httpOnly: true,
       maxAge: 3 * 24 * 60 * 60 * 1000,
-      secure: auto,
-      sameSite: nodeEnv === "production" ? "none" : "lax",
+      secure: false,
+      sameSite: nodeEnv === "production" ? "lax" : "lax",
     },
   })
 );
