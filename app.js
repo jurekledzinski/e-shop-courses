@@ -83,7 +83,7 @@ app.use(
     }),
     cookie: {
       httpOnly: true,
-      maxAge: 1000 * 60 * 60 * 1,
+      maxAge: 3 * 24 * 60 * 60 * 1000,
       secure: nodeEnv === "production" ? true : false,
       sameSite: nodeEnv === "production" ? "none" : "lax",
     },
