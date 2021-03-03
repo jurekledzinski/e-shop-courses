@@ -1,6 +1,0 @@
-.aside-admin{flex-basis:230px;background-color:#242424;min-height:60vh}@media (max-width: 1023px){.aside-admin{display:none}}.aside-admin__wrapper{width:100%}.aside-admin__menu{width:100%;list-style-type:none}.aside-admin__link{display:block;padding:20px 0 20px 20px;text-decoration:none;font-size:1.6rem;color:#aaa;transition:0.2s linear}.aside-admin__link:hover{background-color:#1a1a1a}.aside-admin__link--active{color:orangered;background-color:#1a1a1a}
-
-.admin-content{position:relative;flex-basis:80%}@media (max-width: 1023px){.admin-content{position:initial;width:100%;flex-basis:initial}}.admin-content__title{position:absolute;top:50%;left:50%;width:100%;transform:translate(-50%, -50%);font-weight:400;letter-spacing:1px;text-align:center}@media (max-width: 1023px){.admin-content__title{width:100%;text-align:center}}@media (max-width: 823px) and (orientation: landscape){.admin-content__title{top:18%}}
-
-section .admin-wrapper{width:100%;margin:0 auto}section .admin-wrapper__title{font-weight:400;font-size:2.6rem}@media (max-width: 1023px){section .admin-wrapper__title{display:none}}section .admin-wrapper__content{display:flex;padding:30px 0}@media (max-width: 1023px){section .admin-wrapper__content{justify-content:center}}
-
