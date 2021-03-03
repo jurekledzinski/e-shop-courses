@@ -83,7 +83,7 @@ app.use(
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 1,
       secure: nodeEnv === "production" ? true : false,
-      sameSite: nodeEnv === "production" ? "none" : "lax",
+      sameSite: nodeEnv === "production" ? true : "lax",
     },
   })
 );
