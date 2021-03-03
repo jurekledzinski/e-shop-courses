@@ -1,0 +1,252 @@
+@import "../../../scss-variables/scss-variables.scss";
+
+@mixin buttonAddToCart {
+  width: 150px;
+  padding: 15px 15px;
+  border: none;
+  background-color: $btn-bgColor-confirm;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s linear;
+
+  @include media-queries(medium) {
+    width: 110px;
+    padding: 10px 10px;
+  }
+
+  @include media-queries(extrasmall) {
+    width: 78px;
+    padding: 5px 0px;
+  }
+
+  &:hover {
+    background-color: $btn-bgColor-confirm--hover;
+    letter-spacing: 1px;
+  }
+}
+
+.article-product {
+  min-height: 83vh;
+
+  @include media-queries(xsmall) {
+    padding: 0 10px;
+  }
+
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-left: 20px;
+
+    @include media-queries(xsmall) {
+      padding: 0;
+    }
+
+    &__wrapper {
+      display: flex;
+      width: 100%;
+
+      @include media-queries(large) {
+        flex-direction: column;
+      }
+    }
+
+    &__image {
+      flex-basis: 50%;
+      padding: 20px 20px 20px 0;
+
+      @include media-queries(xsmall) {
+        padding: 0;
+      }
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+      height: auto;
+
+      @include media-queries(large) {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+    }
+
+    &__details {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      flex-basis: 50%;
+      padding: 20px;
+
+      @include media-queries(large) {
+        padding: 20px 20px 20px 0;
+      }
+
+      @include media-queries(xsmall) {
+        padding: 0;
+      }
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      font-size: 2.4rem;
+      font-weight: 500;
+
+      @include media-queries(medium) {
+        font-size: 2rem;
+      }
+
+      @include media-queries(xsmall) {
+        font-size: 1.8rem;
+        margin-top: 20px;
+      }
+    }
+
+    &__authors {
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+
+    &__text {
+      line-height: 1.4;
+      font-weight: 300;
+      text-align: justify;
+    }
+
+    &__details-1 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__avarage-rating {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+      font-size: 1.2rem;
+
+      .far.fa-star {
+        color: #b0b0b0;
+      }
+
+      .fa-star.active {
+        color: #ffdc00;
+      }
+    }
+
+    &__rating-text {
+      color: black;
+      text-indent: 5px;
+    }
+
+    &__details-3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    &__price {
+      margin-bottom: 30px;
+      font-weight: 400;
+
+      @include media-queries(xsmall) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__inStock {
+      font-weight: 400;
+
+      @include media-queries(xsmall) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__addToCart {
+      @include buttonAddToCart();
+    }
+
+    &__out-of-stock {
+      width: 150px;
+      padding: 15px 5px;
+      background-color: #ff4136;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      color: white;
+
+      @include media-queries(medium) {
+        width: 160px;
+        padding: 10px 10px;
+      }
+    }
+
+    &__reviews {
+      width: 50%;
+      padding: 20px 20px 20px 0;
+
+      @include media-queries(large) {
+        width: 100%;
+      }
+
+      @include media-queries(xsmall) {
+        padding: 0;
+      }
+    }
+
+    &__reviews-title {
+      font-size: 2.4rem;
+      font-weight: 500;
+
+      @include media-queries(medium) {
+        font-size: 2rem;
+      }
+
+      @include media-queries(xsmall) {
+        margin-top: 20px;
+        font-size: 1.8rem;
+      }
+    }
+
+    &__info-reviews {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    &__info-reviews-title {
+      margin: 20px 0 10px 0;
+      font-size: 2.4rem;
+      font-weight: 400;
+
+      @include media-queries(medium) {
+        font-size: 2rem;
+      }
+
+      @include media-queries(xsmall) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &__info-reviews-alert {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0 10px;
+      background-color: #d1ecf1;
+      font-weight: 300;
+
+      @include media-queries(xsmall) {
+        font-size: 1.2rem;
+        padding: 10px 0;
+      }
+    }
+
+    .fa-lock {
+      margin-left: 5px;
+      font-size: 1.3rem;
+      color: #333;
+    }
+  }
+}

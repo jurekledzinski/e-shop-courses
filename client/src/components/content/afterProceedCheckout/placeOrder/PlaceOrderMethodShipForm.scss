@@ -1,0 +1,40 @@
+@import "../../../../scss-variables/scss-variables.scss";
+
+.details-shipMethod {
+  padding: 0 20px;
+
+  &__title {
+    font-weight: 400;
+
+    @include media-queries(large) {
+      margin: 10px 0;
+    }
+  }
+
+  &__options-ship {
+    padding: 10px 0;
+  }
+
+  &__wrap-label-input {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__label {
+    font-weight: 300;
+    cursor: pointer;
+  }
+
+  &__input {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  &__reminder {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}

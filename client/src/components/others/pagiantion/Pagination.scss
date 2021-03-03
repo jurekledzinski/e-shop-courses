@@ -1,0 +1,36 @@
+@import "../../../scss-variables/scss-variables.scss";
+
+@mixin btnPage {
+  display: block;
+  padding: 3px 10px;
+  cursor: pointer;
+}
+
+.pagination {
+  min-width: 25px;
+  display: flex;
+  padding: 20px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e9ecef;
+    margin: 0 1px;
+    list-style-type: none;
+  }
+
+  &__number {
+    @include btnPage();
+
+    &:hover {
+      background-color: #e9ecef;
+    }
+  }
+
+  &__number--active {
+    @include btnPage();
+    background-color: #007bff;
+    color: white;
+  }
+}

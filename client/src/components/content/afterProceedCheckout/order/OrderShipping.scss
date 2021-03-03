@@ -1,0 +1,48 @@
+@import "../../../../scss-variables/scss-variables.scss";
+
+@mixin titleBarOrder {
+  padding: 5px 0 5px 20px;
+  color: white;
+  background-color: $middleHeaders;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+
+  @include media-queries(extraMedia7) {
+    font-size: 1.6rem;
+  }
+}
+
+.order-shippingDetails {
+  grid-area: shippingOrder;
+
+  &__title {
+    @include titleBarOrder();
+  }
+
+  &__title-delivery-address {
+    padding-left: 20px;
+    margin-top: 20px;
+    font-weight: 500;
+  }
+
+  &__list {
+    padding: 10px 0 10px 20px;
+    list-style-type: none;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+    font-weight: 300;
+  }
+
+  &__title-delivery {
+    padding-left: 20px;
+    font-weight: 500;
+  }
+
+  &__delivery-method {
+    padding-left: 20px;
+    font-weight: 300;
+  }
+}

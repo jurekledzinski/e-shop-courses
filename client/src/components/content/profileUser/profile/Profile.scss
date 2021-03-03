@@ -1,0 +1,77 @@
+@import "../../../../scss-variables/scss-variables.scss";
+
+.profile-wrapper {
+  &__columns {
+    display: flex;
+
+    @include media-queries(extraMedia1) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    font-style: 2.6rem;
+    font-weight: 500;
+
+    @include media-queries(extraMedia1) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__left-col {
+    flex-basis: 20%;
+
+    @include media-queries(extraMedia1) {
+      width: 50%;
+      padding: 0 20px 0 20px;
+      margin-bottom: 40px;
+    }
+
+    @include media-queries(medium) {
+      width: 100%;
+    }
+
+    @include media-queries(extraMedia3) {
+      padding: 0;
+    }
+  }
+
+  &__right-col {
+    flex-grow: 1;
+    padding: 0 20px 0 50px;
+
+    @include media-queries(extraMedia1) {
+      padding: 0 20px 0 20px;
+    }
+
+    @include media-queries(extraMedia3) {
+      padding: 0;
+    }
+  }
+
+  &__button-profile {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: $btn-bgColor-confirm;
+    box-sizing: border-box;
+    transition: 0.2s linear;
+    font-size: 1.6rem;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    padding: 0;
+
+    @include media-queries(large) {
+      padding: 0;
+      font-size: 1.4rem;
+    }
+
+    &:hover {
+      background-color: $btn-bgColor-confirm--hover;
+      letter-spacing: 1px;
+    }
+  }
+}

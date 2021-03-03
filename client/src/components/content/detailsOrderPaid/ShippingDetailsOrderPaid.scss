@@ -1,0 +1,43 @@
+@import "../../../scss-variables/scss-variables.scss";
+
+@mixin selectShipDeliverBtn {
+  padding: 2px 5px;
+  border: none;
+  background-color: $btn-bgColor-confirm;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s all;
+
+  &:hover {
+    background-color: #036ac4;
+  }
+}
+
+.details-order {
+  line-height: 1.5;
+
+  &__date-paid-thin,
+  &__shipped-date-thin,
+  &__delivered-date-thin,
+  &__shipping-method-thin {
+    font-weight: 300;
+  }
+
+  &__date-paid-thin {
+    @include media-queries(extraMedia1) {
+      display: block;
+    }
+    @include media-queries(lmedium) {
+      display: inline;
+    }
+  }
+
+  &__btn-change-shipped {
+    @include selectShipDeliverBtn();
+  }
+
+  &__btn-change-delivered {
+    @include selectShipDeliverBtn();
+  }
+}

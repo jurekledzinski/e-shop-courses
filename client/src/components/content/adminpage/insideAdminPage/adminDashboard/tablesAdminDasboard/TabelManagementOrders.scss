@@ -1,0 +1,154 @@
+@import "../../../../../../scss-variables/scss-variables.scss";
+
+.table-management-orders {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1.4rem;
+
+  @include media-queries(extraMedia2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  &__head {
+    @include media-queries(extraMedia2) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      line-height: 35px;
+    }
+  }
+
+  &__head-th,
+  &__body-td {
+    height: 50px;
+    padding: 0 5px;
+    border: 1px solid #ddd;
+    font-weight: 300;
+
+    @include media-queries(large) {
+      height: 35px;
+      padding: 0;
+    }
+
+    &:nth-child(1) {
+      text-align: left;
+      @include media-queries(extraMedia2) {
+        text-align: center;
+      }
+    }
+
+    @include media-queries(extrasmall) {
+      height: 30px;
+      padding: 0;
+      line-height: 30px;
+    }
+
+    &:nth-child(2) {
+      text-align: center;
+    }
+    &:nth-child(3) {
+      text-align: center;
+    }
+    &:nth-child(4) {
+      text-align: center;
+      .fa-times {
+        color: #ff4136;
+      }
+      .fa-check {
+        color: #2ecc40;
+      }
+    }
+    &:nth-child(5) {
+      text-align: center;
+      .fa-times {
+        color: #ff4136;
+      }
+      .fa-check {
+        color: #2ecc40;
+      }
+    }
+    &:nth-child(6) {
+      width: 20%;
+      text-align: center;
+      @include media-queries(extraMedia2) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__body-td {
+    &:nth-child(6) {
+      padding: 0;
+    }
+    &:hover {
+      @include media-queries(extraMedia2) {
+        background-color: #f2f2f2;
+      }
+    }
+  }
+
+  &__body-td--currency {
+    &:nth-child(3)::after {
+      content: "€";
+    }
+  }
+
+  &__head-th {
+    padding: 12px 0;
+    background-color: #0074d9;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    &:nth-child(1) {
+      text-align: center;
+    }
+
+    @include media-queries(large) {
+      padding: 0;
+      font-weight: 400;
+    }
+
+    @include media-queries(extraMedia2) {
+      display: grid;
+      display: inline-block;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__body-tr {
+    &:nth-child(even) {
+      background-color: #f2f2f2;
+      @include media-queries(extraMedia2) {
+        background-color: white;
+      }
+    }
+
+    &:hover {
+      background-color: #ddd;
+
+      @include media-queries(extraMedia2) {
+        background-color: white;
+      }
+    }
+  }
+
+  &__head-tr,
+  &__body-tr {
+    @include media-queries(extraMedia2) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &__body {
+    @include media-queries(extraMedia2) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      line-height: 35px;
+    }
+  }
+}

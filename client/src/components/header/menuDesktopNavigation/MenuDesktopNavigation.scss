@@ -1,0 +1,99 @@
+@import "../../../scss-variables/scss-variables.scss";
+
+@mixin button {
+  align-self: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: rgb(170, 170, 170);
+  transition: 0.1s linear;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  flex-grow: 2;
+
+  @include media-queries(large) {
+    visibility: hidden;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    list-style-type: none;
+  }
+
+  &__item {
+    margin-right: 15px;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: rgb(170, 170, 170);
+  }
+
+  &__active {
+    color: orangered;
+    text-decoration: none;
+  }
+
+  &__username {
+    align-self: center;
+    margin-right: 20px;
+    color: white;
+  }
+
+  &__shooping-cart {
+    width: 60px;
+    align-self: center;
+    text-align: center;
+    text-decoration: none;
+    @include media-queries(large) {
+      position: absolute;
+      visibility: visible;
+      right: 40px;
+    }
+
+    @include media-queries(extrasmall) {
+      right: 25px;
+    }
+  }
+
+  &__amount-products {
+    font-size: 1.2rem;
+    color: orangered;
+    text-decoration: none;
+  }
+
+  &__button-login {
+    @include button;
+    margin-right: 50px;
+  }
+
+  &__button-login--active {
+    @include button;
+    margin-right: 50px;
+    color: orangered;
+  }
+
+  &__button-register {
+    margin-right: 10px;
+    @include button;
+  }
+
+  &__button-register--active {
+    @include button;
+    margin-right: 10px;
+    color: orangered;
+  }
+}
+
+.fa-shopping-cart {
+  color: white;
+}

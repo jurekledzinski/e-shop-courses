@@ -1,0 +1,41 @@
+@import "../../../../scss-variables/scss-variables.scss";
+
+@mixin titleBar {
+  padding: 5px 0 5px 20px;
+
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.payment-method {
+  grid-area: payment;
+
+  &__title {
+    @include titleBar();
+    background-color: $middleHeaders;
+
+    @include media-queries(extraMedia7) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__details {
+    padding: 10px 0 10px 20px;
+  }
+
+  &__payment {
+    font-weight: 500;
+  }
+
+  &__images {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 100px;
+    margin-top: 5px;
+  }
+}

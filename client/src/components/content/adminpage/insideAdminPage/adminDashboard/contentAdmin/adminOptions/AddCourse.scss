@@ -1,0 +1,29 @@
+@import "../../../../../../../scss-variables/scss-variables.scss";
+
+section {
+  .add-course {
+    min-height: 100%;
+    padding: 15px 20px 20px 50px;
+
+    @include media-queries(large) {
+      padding: 0;
+    }
+
+    @include media-queries(medium) {
+      padding: 0 20px;
+    }
+
+    @include media-queries(xsmall) {
+      padding: 0 10px;
+    }
+
+    &__title {
+      font-weight: 400;
+      margin-bottom: 30px;
+
+      @include media-queries(xsmall) {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}

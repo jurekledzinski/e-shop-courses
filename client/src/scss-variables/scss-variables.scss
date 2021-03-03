@@ -1,0 +1,103 @@
+$font-family-modal-forms-buttons-inputs-labels: "Helvetica Neue", Helvetica,
+  Arial, sans-serif;
+
+$font-family-rest-app: "Roboto", sans-serif;
+
+$btn-bgColor-confirm: #0074d9;
+$btn-bgColor-confirm--hover: #036ac4;
+
+$header-background-color-oldBrowser: #000000;
+$header-background-color-chrom-safari: -webkit-linear-gradient(
+  to right,
+  #434343,
+  #000000
+);
+$header-background-color-otherBrowsers: linear-gradient(
+  to right,
+  #434343,
+  #000000
+);
+
+$logo-backgound-color: #3f3f3f;
+
+$background-progressBar-oldBrowser: #00b4db;
+$background-progressBar-chrome-safari: -webkit-linear-gradient(
+  to right,
+  #0083b0,
+  #00b4db
+);
+$background-progressBar-otherBrowsers: linear-gradient(
+  to right,
+  #0083b0,
+  #00b4db
+);
+
+$breakpoints: (
+  extrasmall: (
+    max-width: 240px,
+  ),
+  xsmall: (
+    max-width: 280px,
+  ),
+  extraMedia4: (
+    max-width: 290px,
+  ),
+  extraMedia6: (
+    max-width: 319px,
+  ),
+  extraMedia3: (
+    max-width: 375px,
+  ),
+  extraMedia7: (
+    max-width: 410px,
+  ),
+  small: (
+    max-width: 479px,
+  ),
+  medium: (
+    max-width: 500px,
+  ),
+  extraMedia5: (
+    max-width: 600px,
+  ),
+  lmedium: (
+    max-width: 767px,
+  ),
+  extraMedia2: (
+    max-width: 799px,
+  ),
+  xlmedium: (
+    max-width: 830px,
+  ),
+  extraMedia1: (
+    max-width: 960px,
+  ),
+  large: (
+    max-width: 1023px,
+  ),
+  xlarge: (
+    min-width: 1024px,
+  ),
+);
+
+@mixin media-queries($breakpoint) {
+  $size: map-get($breakpoints, $breakpoint);
+
+  @if ($size) {
+    @media #{$size} {
+      @content;
+    }
+  } @else {
+    @error '"#{$breakpoint}" - error media';
+  }
+}
+
+$scrollFirefoxWidth: thin;
+$scrollThumbColor: #bdb6b6;
+$scrollBarBgc: rgb(240, 239, 239);
+$scrollWidthChromeSafari: 6px;
+$scrollHeightChromeSafari: 6px;
+
+$firstHeader: rgba(24, 24, 24, 0.73);
+$middleHeaders: rgba(0, 161, 217, 0.9);
+$lastHeader: rgba(23, 23, 23, 0.73);

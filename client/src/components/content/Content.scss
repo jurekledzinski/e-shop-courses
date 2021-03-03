@@ -1,0 +1,18 @@
+@import "../../scss-variables/scss-variables.scss";
+
+.main {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 120px;
+  min-height: calc(100vh - 170px);
+
+  @media (max-width: 823px) and (orientation: landscape) {
+    min-height: 150vh;
+  }
+
+  @include media-queries(xsmall) {
+    width: 95%;
+  }
+}

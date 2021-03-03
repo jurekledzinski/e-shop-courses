@@ -1,0 +1,40 @@
+@import "../../../../scss-variables/scss-variables.scss";
+
+@mixin titleBarOrder {
+  padding: 5px 0 5px 20px;
+  background-color: $middleHeaders;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+
+  @include media-queries(extraMedia7) {
+    font-size: 1.6rem;
+  }
+}
+
+.order-paymentDetails {
+  grid-area: paymentOrder;
+
+  &__title {
+    @include titleBarOrder();
+  }
+
+  &__method-pay {
+    padding: 10px 0 10px 20px;
+  }
+
+  &__payment {
+    font-weight: 500;
+  }
+
+  &__images {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 100px;
+    margin-top: 5px;
+  }
+}

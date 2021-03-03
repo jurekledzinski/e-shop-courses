@@ -1,0 +1,349 @@
+@import "../../../scss-variables/scss-variables.scss";
+
+.modal-login {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: 500px;
+  padding: 0 40px 0 40px;
+  background-color: white;
+  opacity: 0.6;
+  transform: translateY(20px);
+
+  @include media-queries(large) {
+    top: calc(50% - 100px);
+    left: 50%;
+    width: 360px;
+    opacity: 1;
+    margin: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  @include media-queries(medium) {
+    top: calc(50% - 100px);
+    width: 100%;
+    padding: 0 20px;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  @include media-queries(xsmall) {
+    width: 100%;
+  }
+
+  @media screen and (device-width: 240px) and (device-height: 320px) and (-webkit-device-pixel-ratio: 1) and (orientation: portrait) {
+    top: 30%;
+    width: 90%;
+    padding: 0;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 1023px) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    height: 100vh;
+    margin-top: -118px;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 823px) {
+    top: 63%;
+  }
+
+  @media (orientation: landscape) and (max-width: 667px) {
+    top: 55%;
+    width: 60%;
+  }
+
+  @media (orientation: landscape) and (medium) {
+    top: 55%;
+    width: 100%;
+  }
+
+  @media screen and (device-width: 653px) and (device-height: 280px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+    top: 65%;
+  }
+
+  @media screen and (device-width: 320px) and (device-height: 240px) and (-webkit-device-pixel-ratio: 1) and (orientation: landscape) {
+    top: 75%;
+    width: 90%;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    outline: none;
+    color: #c6c6c6;
+
+    @include media-queries(large) {
+      display: none;
+    }
+
+    &:hover {
+      color: #0074d9;
+    }
+  }
+
+  &__title {
+    margin: 30px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: $font-family-modal-forms-buttons-inputs-labels;
+    font-weight: 400;
+    color: #0074d9;
+
+    @include media-queries(medium) {
+      margin-bottom: 35px;
+      letter-spacing: 4px;
+      font-size: 2.4rem;
+    }
+
+    @include media-queries(extraMedia6) {
+      font-size: 2rem;
+    }
+
+    @media screen and (device-width: 240px) and (device-height: 320px) and (-webkit-device-pixel-ratio: 1) and (orientation: portrait) {
+      font-size: 1.8rem;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 823px) {
+      margin: 0px 0 30px;
+    }
+
+    @media screen and (device-width: 320px) and (device-height: 240px) and (-webkit-device-pixel-ratio: 1) and (orientation: landscape) {
+      margin: 10px 0 20px 0;
+      font-size: 1.8rem;
+    }
+  }
+
+  &__wrap-input {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+
+    @include media-queries(medium) {
+      margin: 10px 0;
+    }
+
+    @media screen and (device-width: 240px) and (device-height: 320px) and (-webkit-device-pixel-ratio: 1) and (orientation: portrait) {
+      margin: 5px;
+    }
+
+    @media (orientation: landscape) and (max-width: 667px) {
+      margin: 5px;
+    }
+
+    @media screen and (device-width: 653px) and (device-height: 280px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+      margin: 3px;
+    }
+
+    @media screen and (device-width: 320px) and (device-height: 240px) and (-webkit-device-pixel-ratio: 1) and (orientation: landscape) {
+      margin: 5px;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    font-size: 1.1rem;
+    color: #0074d9;
+    font-family: $font-family-modal-forms-buttons-inputs-labels;
+
+    @media (orientation: landscape) and (max-width: 667px) {
+      top: -3px;
+    }
+
+    @media screen and (device-width: 653px) and (device-height: 280px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+      top: 0;
+    }
+  }
+
+  &__border {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    width: 0px;
+    height: 1px;
+    background-color: #0074d9;
+    transition: all ease-in-out 0.5s;
+  }
+
+  &__input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid rgb(181, 181, 181);
+    outline: none;
+    font-family: $font-family-modal-forms-buttons-inputs-labels;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      box-shadow: 0 0 0 30px white inset !important;
+      -webkit-box-shadow: 0 0 0 30px white inset !important;
+    }
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:placeholder-shown ~ .modal-login__label {
+      font-size: 1.5rem;
+      top: 15px;
+      color: rgb(106, 106, 106);
+      cursor: text;
+
+      @media screen and (device-width: 653px) and (device-height: 280px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+        top: 5px;
+      }
+    }
+
+    &:focus ~ .modal-login__label {
+      top: -10px;
+      font-size: 1.1rem;
+      color: #0074d9;
+
+      @media (orientation: landscape) and (max-width: 667px) {
+        top: -3px;
+      }
+
+      @media screen and (device-width: 653px) and (device-height: 280px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+        top: -5px;
+      }
+    }
+
+    &:required {
+      box-shadow: none;
+    }
+
+    &:active ~ .modal-login__border,
+    &:focus ~ .modal-login__border {
+      width: 100%;
+    }
+
+    &:active ~ .modal-login__visible-password,
+    &:active ~ .modal-login__email-envelope,
+    &:focus ~ .modal-login__visible-password,
+    &:focus ~ .modal-login__email-envelope {
+      top: 10px;
+      color: #0074d9;
+    }
+
+    &:not(:placeholder-shown) ~ .modal-login__border {
+      width: 100%;
+    }
+
+    &:not(:placeholder-shown) ~ .modal-login__email-envelope,
+    &:not(:placeholder-shown) ~ .modal-login__visible-password {
+      top: 10px;
+      color: #0074d9;
+    }
+  }
+
+  &__email-envelope,
+  &__visible-password {
+    position: absolute;
+    top: 17px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    color: rgb(199, 199, 199);
+    font-size: 15px;
+  }
+
+  &__visible-password {
+    cursor: pointer;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 15px 15px;
+    margin-top: 30px;
+    border: none;
+    background-color: #0074d9;
+    font-size: 1.4rem;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s linear;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: $font-family-modal-forms-buttons-inputs-labels;
+
+    @include media-queries(medium) {
+      margin-top: 50px;
+    }
+
+    @media screen and (device-width: 240px) and (device-height: 320px) and (-webkit-device-pixel-ratio: 1) and (orientation: portrait) {
+      padding: 10px 0;
+    }
+
+    @media (orientation: landscape) and (max-width: 823px) {
+      padding: 12px 0;
+      margin-top: 30px;
+    }
+
+    @media screen and (device-width: 653px) and (device-height: 280px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+
+    @media screen and (device-width: 568px) and (device-height: 320px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+      padding: 10px 0;
+      margin-top: 10px;
+    }
+
+    @media screen and (device-width: 320px) and (device-height: 240px) and (-webkit-device-pixel-ratio: 1) and (orientation: landscape) {
+      padding: 10px 0;
+    }
+
+    &:hover {
+      background-color: #036ac4;
+      letter-spacing: 3px;
+      color: white;
+      font-weight: 500;
+    }
+  }
+
+  &__not-register {
+    margin-top: 40px;
+    font-size: 1.3rem;
+
+    @include media-queries(xsmall) {
+      font-size: 1.2rem;
+    }
+
+    @media screen and (device-width: 240px) and (device-height: 320px) and (-webkit-device-pixel-ratio: 1) and (orientation: portrait) {
+      text-align: center;
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 823px) {
+      margin-top: 20px;
+    }
+  }
+
+  &__singIn {
+    color: $btn-bgColor-confirm;
+
+    &:hover {
+      color: $btn-bgColor-confirm--hover;
+      cursor: pointer;
+    }
+  }
+}

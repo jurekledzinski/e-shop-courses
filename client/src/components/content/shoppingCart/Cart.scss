@@ -1,0 +1,31 @@
+@import "../../../scss-variables/scss-variables.scss";
+
+.section-shopping-cart {
+  margin: 0 auto;
+
+  .shopping-cart {
+    position: relative;
+    width: 100%;
+
+    @include media-queries(xlarge) {
+      padding: 0 50px;
+    }
+
+    @include media-queries(extraMedia5) {
+      display: grid;
+      grid-template-columns: 250px;
+      row-gap: 30px;
+      justify-content: center;
+      justify-items: center;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      font-weight: 400;
+
+      @media (min-width: 768px) {
+        margin-bottom: 70px;
+      }
+    }
+  }
+}

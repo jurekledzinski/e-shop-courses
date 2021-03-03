@@ -1,0 +1,17 @@
+@import "../../../scss-variables/scss-variables.scss";
+
+.validation-msg {
+  &-success {
+    margin: 15px 0 15px;
+    font-size: 1.5rem;
+    color: green;
+    font-family: $font-family-modal-forms-buttons-inputs-labels;
+  }
+
+  &-alert {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: red;
+    font-family: $font-family-modal-forms-buttons-inputs-labels;
+  }
+}

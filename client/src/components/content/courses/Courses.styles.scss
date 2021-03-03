@@ -1,0 +1,16 @@
+@import "../../../scss-variables/scss-variables.scss";
+
+section {
+  .courses-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 270px));
+    grid-template-rows: auto auto auto;
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: center;
+    justify-items: center;
+  }
+}
