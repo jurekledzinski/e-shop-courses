@@ -61,7 +61,7 @@ app.disable("x-powered-by");
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:3000",
+    origin: "https://whispering-wave-19363.herokuapp.com",
   })
 );
 app.use(express.json());
