@@ -58,10 +58,6 @@
     width: 60%;
   }
 
-  @media (orientation: landscape) and (medium) {
-    width: 100%;
-  }
-
   @media screen and (device-width: 653px) and (device-height: 280px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
     top: 65%;
   }
@@ -252,6 +248,13 @@
     &:not(:placeholder-shown) ~ .modal-login__visible-password {
       top: 10px;
       color: #0074d9;
+    }
+
+    &:focus ~ .modal-login,
+    &:active ~ .modal-login {
+      @media (orientation: landscape) and (medium) {
+        width: 100%;
+      }
     }
   }
 
