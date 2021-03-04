@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 import "./Cart.scss";
 
@@ -36,6 +36,10 @@ const Cart = () => {
       updateTotal={updateTotal}
     />
   );
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   return (
     <section className="section-shopping-cart">

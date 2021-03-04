@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 import "./detailsOrderPaid.scss";
 
@@ -138,6 +138,10 @@ const DetailsOrderPaid = ({
 
     status !== 200 ? setErrorServerMsg(data) : null;
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   const shipDetailsOrder = singlePaidOrder.map((item) => (
     <ShippingDetailsOrderPaid
