@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Ecommerc shop build from scratch",
   "main": "index.js",
-  "proxy": "https://whispering-wave-19363.herokuapp.com",
   "scripts": {
     "start": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production"

@@ -258,7 +258,7 @@ const PayButtonPaypal = ({
       handleClose={handleClose}
       setCheckToClearTick={setCheckToClearTick}
       subtitle="You will be redirect to home page. Please try one more time."
-      title="Error during proccesing payment."
+      title="Something went wrong during proccesing payment. Please check your details"
       partTitle={"We are sorry for inconvenience."}
       ref={msgPopUpRef}
     />
