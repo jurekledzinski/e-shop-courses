@@ -19,7 +19,12 @@
     margin-bottom: 10px;
 
     &:last-child {
+      display: flex;
       margin-bottom: 0;
+      @include media-queries(medium) {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 
@@ -35,6 +40,19 @@
 
   &__reminder {
     font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  &__estimated-time {
+    margin-left: 5px;
+    font-weight: 300;
+
+    @include media-queries(medium) {
+      margin-left: 17px;
+    }
+  }
+
+  &__price {
     font-weight: 500;
   }
 }

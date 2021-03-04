@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import "./PlaceOrderMethodShipForm.scss";
+
+import { NavContext } from "../../../../store/NavProvider";
 
 const PlaceOrderMethodShipForm = ({
   chooseMethodShip,
   handleChangeRadioButtons,
 }) => {
+  const { checkWidthWindow500 } = useContext(NavContext);
   const adjustDate = (value) => {
     let date = new Date();
 
@@ -46,7 +49,8 @@ const PlaceOrderMethodShipForm = ({
               checked={chooseMethodShip === "Standard"}
               className="details-shipMethod__input"
             />
-            Standard ({adjustDate("standard")}) 2.00€
+            Standard ({adjustDate("standard")}){" "}
+            <span className="details-shipMethod__price">2.00€</span>
           </label>
         </div>
         <div className="details-shipMethod__wrap-label-input">
@@ -60,7 +64,8 @@ const PlaceOrderMethodShipForm = ({
               checked={chooseMethodShip === "TwoDays"}
               className="details-shipMethod__input"
             />
-            Two days ({adjustDate("twoDays")}) 4.00€
+            Two days ({adjustDate("twoDays")}){" "}
+            <span className="details-shipMethod__price">4.00€</span>
           </label>
         </div>
         <div className="details-shipMethod__wrap-label-input">
@@ -74,7 +79,8 @@ const PlaceOrderMethodShipForm = ({
               checked={chooseMethodShip === "NextDay"}
               className="details-shipMethod__input"
             />
-            Next day ({adjustDate("nextDay")}) 5.00€
+            Next day ({adjustDate("nextDay")}){" "}
+            <span className="details-shipMethod__price">5.00€</span>
           </label>
         </div>
         <div className="details-shipMethod__wrap-label-input">
@@ -88,8 +94,17 @@ const PlaceOrderMethodShipForm = ({
               checked={chooseMethodShip === "Outside Europe"}
               className="details-shipMethod__input"
             />
-            Outside Europe (Est. time arrives 10-21 days) 14.00€
+            Outside Europe{" "}
+            {checkWidthWindow500 ? (
+              <span className="details-shipMethod__price">14.00€</span>
+            ) : null}
           </label>
+          <p className="details-shipMethod__estimated-time">
+            (Est. time arrives 10-21 days){" "}
+            {checkWidthWindow500 ? null : (
+              <span className="details-shipMethod__price">14.00€</span>
+            )}
+          </p>
         </div>
       </form>
       <p className="details-shipMethod__reminder">

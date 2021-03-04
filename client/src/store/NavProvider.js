@@ -20,6 +20,10 @@ const NavProvider = ({ children }) => {
     window.innerWidth >= 800 ? true : false
   );
 
+  const [checkWidthWindow500, setCheckWidthWindow500] = useState(
+    window.innerWidth <= 500 ? true : false
+  );
+
   useEffect(() => {
     const checkGlobalSizeWindow = () => {
       if (window.innerWidth >= 1024) {
@@ -37,6 +41,10 @@ const NavProvider = ({ children }) => {
       window.innerWidth >= 800
         ? setCheckWindowMedium(true)
         : setCheckWindowMedium(false);
+
+      window.innerWidth <= 500
+        ? setCheckWidthWindow500(true)
+        : setCheckWidthWindow500(false);
     };
     window.addEventListener("resize", checkGlobalSizeWindow);
     return () => {
@@ -48,6 +56,7 @@ const NavProvider = ({ children }) => {
     <NavContext.Provider
       value={{
         appWrapperrActive,
+        checkWidthWindow500,
         checkWhichMenu,
         checkWindowMedium,
         checkSizeWindow,
