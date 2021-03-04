@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[55],{179:function(e,n,a){},208:function(e,n,a){"use strict";a.r(n);var t=a(0),c=a.n(t),t=a(179),r=a(45);n.default=function(){return c.a.createElement("div",{className:"page-register"},c.a.createElement(r.a,null))}}}]);
