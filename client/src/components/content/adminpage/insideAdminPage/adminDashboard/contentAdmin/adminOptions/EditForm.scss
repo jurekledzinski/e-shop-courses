@@ -16,6 +16,16 @@
 
   @include media-queries(large) {
     position: initial;
+    display: flex;
+    width: 70%;
+    padding: 0 40px 0 40px;
+    margin: 0 auto;
+    opacity: 1;
+    z-index: 0;
+  }
+
+  @include media-queries(lmedium) {
+    position: initial;
     display: inline;
     width: 100%;
     padding: 0 40px 0 40px;
