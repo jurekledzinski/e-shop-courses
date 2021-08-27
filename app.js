@@ -128,7 +128,6 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use((error, req, res, next) => {
-  console.log(error, "error middleware");
   res.status(error.status || 500);
 
   res.json({
