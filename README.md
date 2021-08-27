@@ -1,4 +1,4 @@
-# ![WebApp](https://iharsh234.github.io/WebApp/images/demo/demo_landing.JPG)
+# ![WebApp](https://github.com/jurekledzinski/e-shop-courses/blob/media/images/Course%20shop.jpg?raw=true)
 
 # Course shop
 
@@ -90,7 +90,7 @@ npm start - run locally
 
 #### See live
 
-[Course shop](xxx)
+[Course shop](https://whispering-wave-19363.herokuapp.com/)
 
 ## License
 
