@@ -73,12 +73,10 @@
 
   &__button-login {
     @include button;
-    margin-right: 50px;
   }
 
   &__button-login--active {
     @include button;
-    margin-right: 50px;
     color: orangered;
   }
 
