@@ -19,12 +19,6 @@ const {
   secretSession,
 } = require("./configs/config");
 
-console.log(atlasUrl, "atlas url");
-console.log(nodeEnv, "nodeEnv");
-console.log(sessionName, "sessionName");
-console.log(secretSession, "secretSession");
-console.log(port, "port");
-
 mongoose.connect(atlasUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -32,13 +26,12 @@ mongoose.connect(atlasUrl, {
 
 const db = mongoose.connection;
 
-db.on("error", (err) => {
-  console.log(err, "to jest error mongo");
-});
+let errDb = false;
+let openDb = true;
 
-db.once("open", () => {
-  console.log("Baza danych podłaczona poprawnie");
-});
+db.on("error", (err) => errDb);
+
+db.once("open", () => openDb);
 
 const loginRouter = require("./routes/login");
 const coursesRouter = require("./routes/courses");
