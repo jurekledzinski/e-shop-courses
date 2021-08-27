@@ -1,0 +1,90 @@
+@import "../../../../scss-variables/scss-variables.scss";
+
+@mixin buttonProfileUpdate {
+  width: 180px;
+  padding: 10px 15px;
+  border: none;
+  background-color: $btn-bgColor-confirm;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s linear;
+  text-transform: uppercase;
+
+  @include media-queries(extrasmall) {
+    width: 160px;
+  }
+
+  &:hover {
+    background-color: $btn-bgColor-confirm--hover;
+    letter-spacing: 1px;
+  }
+}
+
+.profile {
+  @include media-queries(extrasmall) {
+    text-align: center;
+  }
+  &__wrapper-details {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+
+  &__input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid rgb(181, 181, 181);
+    outline: none;
+    font-family: $font-family-modal-forms-buttons-inputs-labels;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:placeholder-shown ~ .profile__label {
+      top: 15px;
+      font-size: 1.5rem;
+      color: rgb(106, 106, 106);
+      cursor: text;
+    }
+
+    &:focus ~ .profile__label {
+      top: -10px;
+      font-size: 1.1rem;
+      color: #0074d9;
+    }
+
+    &:required {
+      box-shadow: none;
+    }
+
+    &:focus {
+      border-bottom-color: #0074d9;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    font-size: 1.1rem;
+    color: #0074d9;
+    font-family: $font-family-modal-forms-buttons-inputs-labels;
+  }
+
+  &__button {
+    @include buttonProfileUpdate();
+    margin-top: 60px;
+
+    @include media-queries(extraMedia1) {
+      margin-top: 25px;
+    }
+  }
+}

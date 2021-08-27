@@ -1,0 +1,29 @@
+@import "../../../../../../../scss-variables/scss-variables.scss";
+
+section {
+  .management-slider {
+    padding: 15px 20px 20px 50px;
+
+    @include media-queries(large) {
+      padding: 0;
+    }
+
+    @include media-queries(xsmall) {
+      padding: 0 10px;
+    }
+
+    &__title {
+      margin-bottom: 15px;
+      font-weight: 400;
+
+      @include media-queries(xsmall) {
+        font-size: 1.9rem;
+      }
+    }
+
+    &__option {
+      margin: 10px 0;
+      font-weight: 300;
+    }
+  }
+}

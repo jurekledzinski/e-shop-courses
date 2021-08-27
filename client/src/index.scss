@@ -1,0 +1,29 @@
+@import "./scss-variables/scss-variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+
+  @include media-queries(medium) {
+    font-size: 9px;
+  }
+
+  @media (orientation: landscape) and (max-width: 667px) {
+    font-size: 9px;
+  }
+}
+
+body {
+  font-family: $font-family-rest-app;
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+}

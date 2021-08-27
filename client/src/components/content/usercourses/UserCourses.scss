@@ -1,0 +1,26 @@
+@import "../../../scss-variables/scss-variables.scss";
+
+.user-bought-product {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 270px));
+  grid-template-rows: auto auto auto;
+  column-gap: 30px;
+  row-gap: 30px;
+  justify-content: center;
+
+  @include media-queries(medium) {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
+  }
+
+  @include media-queries(extrasmall) {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 220px));
+  }
+
+  &__title {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    font-weight: 300;
+  }
+}

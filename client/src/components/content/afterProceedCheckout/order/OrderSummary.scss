@@ -1,0 +1,67 @@
+@import "../../../../scss-variables/scss-variables.scss";
+
+@mixin titleBarOrder {
+  padding: 5px 0 5px 20px;
+  background-color: $lastHeader;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+
+  @include media-queries(extraMedia7) {
+    font-size: 1.6rem;
+  }
+}
+
+.order-summaryDetails {
+  grid-area: summaryOrder;
+
+  &__title {
+    @include titleBarOrder();
+  }
+
+  &__details {
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
+
+  &__subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  &__est-shipping {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  &__total-price {
+    color: orangered;
+  }
+
+  &__payButtons {
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  &__credit-ideal {
+    width: 100%;
+    padding: 15px 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}

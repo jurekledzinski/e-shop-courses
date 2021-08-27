@@ -1,0 +1,133 @@
+@import "../../../scss-variables/scss-variables.scss";
+
+.shopping-panels {
+  display: grid;
+  grid-template-columns: 3fr 240px;
+  column-gap: 10px;
+
+  grid-template-areas: "left right";
+
+  @include media-queries(large) {
+    grid-template-columns: 3fr 230px;
+    column-gap: 10px;
+  }
+
+  @include media-queries(lmedium) {
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "left left"
+      "right right";
+  }
+
+  @include media-queries(extraMedia5) {
+    grid-template-areas:
+      "left left"
+      "right right";
+  }
+
+  @include media-queries(extrasmall) {
+    grid-template-columns: 3fr 220px;
+    padding: 0 10px;
+  }
+
+  &__left {
+    grid-area: left;
+  }
+
+  &__right {
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: -1px 1px 25px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  &__right-title {
+    width: 100%;
+    height: 50px;
+    padding: 10px 0 0 10px;
+    background-color: #242424;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: white;
+    line-height: calc(50px - 20px);
+    letter-spacing: 1px;
+  }
+
+  &__total {
+    font-size: 1.6rem;
+  }
+
+  &__total__qty {
+    margin-bottom: 10px;
+    color: #05c2e8;
+  }
+
+  &__total-qty-span {
+    color: rgb(147, 147, 147);
+  }
+
+  &__total-price {
+    color: #05c2e8;
+  }
+
+  &__total-price-span {
+    color: rgb(147, 147, 147);
+  }
+
+  &__clearcart-btn {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #d2d2d2;
+    margin: 10px 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+  }
+
+  &__checkout-btn {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #0074d9;
+    border: none;
+    color: white;
+    outline: none;
+    transition: 0.2s linear;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #017ae3;
+    }
+  }
+
+  &__message {
+    font-weight: 300;
+
+    @media (min-width: 768px) {
+      margin-top: -60px;
+    }
+
+    @include media-queries(lmedium) {
+      grid-column: 1/-1;
+      font-size: 2rem;
+      margin-bottom: 130px;
+    }
+
+    @include media-queries(extraMedia5) {
+      grid-column: 1/-1;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    @include media-queries(medium) {
+      margin-bottom: 70px;
+    }
+
+    @media (orientation: landscape) {
+      margin-bottom: 0;
+    }
+  }
+}

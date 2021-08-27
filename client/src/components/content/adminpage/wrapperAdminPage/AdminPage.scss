@@ -1,0 +1,26 @@
+@import "../../../../scss-variables/scss-variables.scss";
+
+section {
+  .admin-wrapper {
+    width: 100%;
+    margin: 0 auto;
+
+    &__title {
+      font-weight: 400;
+      font-size: 2.6rem;
+
+      @include media-queries(large) {
+        display: none;
+      }
+    }
+
+    &__content {
+      display: flex;
+      padding: 30px 0;
+
+      @include media-queries(large) {
+        justify-content: center;
+      }
+    }
+  }
+}

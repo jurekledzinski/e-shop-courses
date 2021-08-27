@@ -1,0 +1,57 @@
+@import "../../../../scss-variables/scss-variables.scss";
+
+.orderCard-product {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+
+  @include media-queries(medium) {
+    padding: 20px 0;
+  }
+
+  &__images {
+    flex-basis: 10%;
+  }
+  &__img {
+    display: block;
+    width: 120px;
+    height: auto;
+
+    @include media-queries(medium) {
+      width: 100px;
+    }
+  }
+
+  &__details {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 10px;
+    font-size: 1.4rem;
+    @include media-queries(extraMedia6) {
+      font-size: 1.3rem;
+    }
+    @include media-queries(extrasmall) {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__name-product {
+    font-size: 1.5rem;
+    @include media-queries(extraMedia6) {
+      font-size: 1.4rem;
+    }
+
+    @include media-queries(extrasmall) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__qty {
+    font-weight: 300;
+  }
+
+  &__price {
+    font-weight: 300;
+  }
+}

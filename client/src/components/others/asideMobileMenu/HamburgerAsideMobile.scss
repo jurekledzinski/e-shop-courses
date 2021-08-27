@@ -1,0 +1,57 @@
+@import "../../../scss-variables/scss-variables.scss";
+
+.hamburger-2 {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 20px;
+  height: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: transform 1s linear, 1.2s opacity;
+  transform-origin: center;
+  opacity: 0;
+  cursor: pointer;
+
+  &__item {
+    display: block;
+    width: 90%;
+    height: 2px;
+    background-color: rgb(72, 72, 72);
+  }
+
+  &__item--1 {
+    transform: rotate(45deg) translate(3px, 2px);
+  }
+
+  &__item--2 {
+    display: none;
+  }
+
+  &__item--3 {
+    transform: rotate(-45deg) translate(3px, -2px);
+  }
+
+  &--rotate {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 20px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: transform 1s linear, 1.2s opacity;
+    transform-origin: center;
+    cursor: pointer;
+    transform: rotate(180deg);
+    opacity: 1;
+
+    @include media-queries(xlarge) {
+      visibility: hidden;
+    }
+  }
+}

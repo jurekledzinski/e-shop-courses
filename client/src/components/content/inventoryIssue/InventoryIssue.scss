@@ -1,0 +1,157 @@
+@import "../../../scss-variables/scss-variables.scss";
+
+@mixin button-choice {
+  width: 200px;
+  padding: 15px 0;
+  border: none;
+  background-color: $btn-bgColor-confirm;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 1.4rem;
+  outline: none;
+
+  @include media-queries(lmedium) {
+    width: 175px;
+  }
+
+  @include media-queries(extraMedia5) {
+    width: 100%;
+  }
+
+  @include media-queries(medium) {
+    padding: 13px 0;
+  }
+
+  @include media-queries(xsmall) {
+    padding: 11px 0;
+  }
+
+  &:hover {
+    background-color: $btn-bgColor-confirm--hover;
+  }
+}
+
+.inventory-issue {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 500px;
+  height: 52vh;
+  padding: 30px;
+  background-color: white;
+  opacity: 0.6;
+  transform: translateY(20px);
+  overflow-y: scroll;
+
+  scrollbar-width: $scrollFirefoxWidth;
+  scrollbar-color: $scrollThumbColor $scrollBarBgc;
+
+  &::-webkit-scrollbar {
+    width: $scrollWidthChromeSafari;
+    height: $scrollHeightChromeSafari;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $scrollBarBgc;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $scrollThumbColor;
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: $scrollBarBgc;
+  }
+
+  @include media-queries(large) {
+    width: 55%;
+  }
+
+  @include media-queries(extraMedia1) {
+    width: 58%;
+  }
+
+  @include media-queries(xlmedium) {
+    width: 63%;
+  }
+
+  @include media-queries(lmedium) {
+    width: 70%;
+  }
+
+  @include media-queries(extraMedia5) {
+    width: 90%;
+  }
+
+  @include media-queries(medium) {
+    width: 80%;
+  }
+
+  @include media-queries(extraMedia7) {
+    width: 90%;
+  }
+
+  @include media-queries(extraMedia6) {
+    width: 95%;
+    padding: 30px 20px 30px;
+  }
+
+  @include media-queries(extrasmall) {
+    width: 100%;
+  }
+
+  &__title {
+    font-weight: 400;
+
+    @include media-queries(extraMedia5) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    margin: 20px 0 10px 0;
+    font-weight: 300;
+
+    @include media-queries(extraMedia5) {
+      text-align: center;
+    }
+
+    @include media-queries(medium) {
+      font-size: 1.5rem;
+    }
+
+    @include media-queries(extrasmall) {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__choice-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+
+    @include media-queries(extraMedia5) {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+    }
+  }
+
+  &__apply-btn {
+    @include button-choice;
+    @include media-queries(extraMedia5) {
+      margin-bottom: 15px;
+    }
+    @include media-queries(extraMedia7) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__return-btn {
+    @include button-choice;
+  }
+}

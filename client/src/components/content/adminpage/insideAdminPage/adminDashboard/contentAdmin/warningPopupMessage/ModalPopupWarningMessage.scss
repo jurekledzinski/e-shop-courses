@@ -1,0 +1,127 @@
+@import "../../../../../../../scss-variables/scss-variables.scss";
+
+.modal-popup {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: auto;
+  padding: 30px 20px;
+  background-color: white;
+  box-sizing: border-box;
+  transform: translateY(20px);
+  opacity: 0.6;
+
+  @include media-queries(extraMedia2) {
+    width: 430px;
+  }
+
+  @include media-queries(medium) {
+    width: 370px;
+    padding: 12px 20px;
+  }
+
+  @media (max-width: 430px) {
+    width: 323px;
+  }
+
+  @include media-queries(extraMedia3) {
+    width: 90%;
+  }
+
+  @include media-queries(extraMedia6) {
+    justify-content: space-between;
+    height: 230px;
+  }
+
+  @include media-queries(xsmall) {
+    padding: 11px 20px;
+  }
+
+  @include media-queries(extrasmall) {
+    padding: 7px 20px;
+  }
+
+  &__title {
+    align-self: center;
+    margin-top: 5px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: $font-family-modal-forms-buttons-inputs-labels;
+
+    @include media-queries(medium) {
+      margin-top: 15px;
+    }
+
+    @include media-queries(extraMedia3) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    @include media-queries(extraMedia6) {
+      margin-top: 25px;
+    }
+
+    @include media-queries(xsmall) {
+      font-size: 1.4rem;
+      text-align: center;
+    }
+  }
+
+  &__wrap-btns {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+
+    @include media-queries(extraMedia6) {
+      flex-direction: column;
+      margin-top: 0px;
+    }
+  }
+
+  &__btn {
+    width: 140px;
+    padding: 10px 10px;
+    margin: 40px 20px 0 20px;
+    background-color: #ff4136;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: $font-family-modal-forms-buttons-inputs-labels;
+    transition: 0.2s linear;
+
+    @include media-queries(medium) {
+      width: 100px;
+      padding: 7px 0px;
+      margin: 20px 20px 10px 20px;
+    }
+
+    @include media-queries(extraMedia3) {
+      width: 100px;
+      padding: 6px 0px;
+      margin: 20px 10px 10px 10px;
+    }
+
+    @include media-queries(extraMedia6) {
+      width: 100%;
+      margin: 0;
+
+      &:nth-child(1) {
+        margin-bottom: 10px;
+      }
+
+      &:nth-child(2) {
+        margin-bottom: 10px;
+      }
+    }
+
+    @include media-queries(xsmall) {
+    }
+
+    &:hover {
+      background-color: #b0352e;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+  }
+}

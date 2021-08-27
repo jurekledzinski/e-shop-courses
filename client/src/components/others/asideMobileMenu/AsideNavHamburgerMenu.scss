@@ -1,0 +1,38 @@
+@import "../../../scss-variables/scss-variables.scss";
+
+.admin-aside-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 20px;
+  height: 15px;
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  visibility: hidden;
+  cursor: pointer;
+
+  &--hide {
+    display: none;
+  }
+
+  @include media-queries(large) {
+    visibility: visible;
+  }
+
+  &__hamburger-line1,
+  &__hamburger-line2,
+  &__hamburger-line3 {
+    display: block;
+    width: 60%;
+    height: 2px;
+    background-color: #333;
+  }
+
+  &__hamburger-line2 {
+    width: 80%;
+  }
+  &__hamburger-line3 {
+    width: 100%;
+  }
+}

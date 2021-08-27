@@ -1,0 +1,22 @@
+@import "../../../../scss-variables/scss-variables.scss";
+
+@mixin titleBarOrder {
+  padding: 5px 0 5px 20px;
+  background-color: $middleHeaders;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+
+  @include media-queries(extraMedia7) {
+    font-size: 1.6rem;
+  }
+}
+
+.order-itemsDetails {
+  grid-area: itemsOrder;
+
+  &__title {
+    @include titleBarOrder();
+  }
+}

@@ -1,0 +1,144 @@
+@import "../../../../scss-variables/scss-variables.scss";
+
+.process-bar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  font-weight: 300;
+  letter-spacing: 1px;
+
+  @include media-queries(medium) {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+  }
+
+  @include media-queries(xsmall) {
+    font-size: 1.2rem;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: -55px;
+    flex-basis: 25%;
+  }
+
+  &__icon-line {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 20px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    @include media-queries(lmedium) {
+      left: calc(50% - 15px);
+    }
+  }
+
+  &__line {
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #01ff70;
+    transition: all 0.7s linear 1.4s;
+
+    &--active {
+      width: calc(100% - 40px);
+    }
+
+    &--active-ship-line {
+      width: calc(100% - 40px);
+    }
+
+    &--active-payment-line {
+      width: calc(100% - 40px);
+    }
+
+    &--inActive {
+      display: block;
+      width: calc(100% - 40px);
+      height: 1px;
+      background-color: #ddd;
+    }
+
+    @include media-queries(lmedium) {
+      width: calc(0% - 30px);
+
+      &--active {
+        width: calc(100% - 30px);
+      }
+
+      &--active-ship-line {
+        width: calc(100% - 30px);
+      }
+
+      &--active-payment-line {
+        width: calc(100% - 30px);
+      }
+
+      &--inActive {
+        display: block;
+        width: calc(100% - 30px);
+        height: 1px;
+        background-color: #ddd;
+      }
+    }
+  }
+
+  &__signIn {
+    color: #333;
+    font-weight: 400;
+  }
+
+  &__shipping {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+  }
+
+  &__shipping--active {
+    text-decoration: none;
+    color: orangered;
+    font-weight: 400;
+  }
+
+  &__payment {
+    text-decoration: none;
+    color: #333;
+  }
+
+  &__payment--active {
+    text-decoration: none;
+    color: orangered;
+    font-weight: 400;
+  }
+
+  &__payment--inactive {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+  }
+
+  &__place-order {
+    text-decoration: none;
+    color: #333;
+
+    @include media-queries(extraMedia3) {
+      letter-spacing: -1px;
+    }
+  }
+
+  &__place-order--active {
+    text-decoration: none;
+    color: orangered;
+    font-weight: 400;
+
+    @include media-queries(extraMedia3) {
+      letter-spacing: -1px;
+    }
+  }
+}

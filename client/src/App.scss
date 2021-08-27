@@ -1,0 +1,40 @@
+@import "./scss-variables/scss-variables.scss";
+
+.app-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.app-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  visibility: visible;
+  transition: 0.4s all linear;
+
+  &--active {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    visibility: visible;
+    transition: 0.4s all linear;
+
+    transform: translateX(300px);
+    opacity: 0.6;
+
+    @include media-queries(medium) {
+      transform: translateX(calc(90% - 10px));
+    }
+
+    @include media-queries(small) {
+      transform: translateX(calc(100% - 55px));
+    }
+
+    @include media-queries(xsmall) {
+      transform: translateX(100%);
+    }
+  }
+}

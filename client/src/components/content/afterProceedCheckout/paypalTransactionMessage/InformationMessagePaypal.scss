@@ -1,0 +1,187 @@
+@import "../../../../scss-variables/scss-variables.scss";
+
+.message-paypal {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 1);
+  opacity: 0.6;
+  transform: translateY(20px);
+
+  @include media-queries(large) {
+    font-size: 2.2rem;
+  }
+
+  @include media-queries(extraMedia2) {
+    width: 430px;
+  }
+
+  @include media-queries(medium) {
+    width: 370px;
+    padding: 12px 15px;
+  }
+
+  @media (max-width: 430px) {
+    width: 323px;
+  }
+
+  @include media-queries(extraMedia3) {
+    width: 90%;
+  }
+
+  @include media-queries(xsmall) {
+    padding: 11px 20px;
+  }
+
+  @include media-queries(extrasmall) {
+    padding: 7px 20px;
+  }
+
+  &__title,
+  &__error-part-title {
+    color: #333;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 1.4;
+    text-align: center;
+
+    @include media-queries(large) {
+      font-size: 2.2rem;
+    }
+
+    @include media-queries(medium) {
+      font-size: 1.8rem;
+    }
+
+    @include media-queries(extraMedia3) {
+      font-size: 1.7rem;
+    }
+
+    @include media-queries(xsmall) {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__error-part-title {
+    margin-bottom: 10px;
+  }
+
+  &__subTitle {
+    align-self: center;
+    color: #333;
+    font-weight: 300;
+    font-size: 1.6rem;
+
+    @include media-queries(medium) {
+      text-align: center;
+    }
+
+    @include media-queries(xsmall) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.message-paypal-success {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 1);
+  opacity: 0.6;
+  transform: translateY(20px);
+
+  @include media-queries(large) {
+    font-size: 2.2rem;
+  }
+
+  @include media-queries(extraMedia2) {
+    width: 430px;
+  }
+
+  @include media-queries(medium) {
+    width: 90%;
+    height: auto;
+    padding: 12px 15px;
+  }
+
+  &__svg-icon {
+    width: 70px;
+    height: auto;
+  }
+
+  &__svg-circle {
+    stroke: #01ff70;
+    stroke-width: 5;
+    stroke-miterlimit: 10;
+  }
+
+  &__svg-path-1 {
+    stroke: #01ff70;
+    fill: #f2f2f2;
+    stroke-width: 5;
+    stroke-miterlimit: 10;
+  }
+
+  &__svg-line {
+    fill: none;
+    stroke: #000000;
+    stroke-miterlimit: 10;
+  }
+
+  &__svg-path-2 {
+    fill: #ffffff;
+    stroke: #01ff70;
+    stroke-width: 5;
+    stroke-miterlimit: 10;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 1.4;
+    text-align: center;
+
+    @include media-queries(large) {
+      font-size: 2.2rem;
+    }
+
+    @include media-queries(medium) {
+      font-size: 1.8rem;
+    }
+
+    @include media-queries(extraMedia3) {
+      font-size: 1.7rem;
+    }
+
+    @include media-queries(xsmall) {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__subTitle {
+    align-self: center;
+    color: #333;
+    font-weight: 300;
+    font-size: 1.6rem;
+
+    @include media-queries(medium) {
+      text-align: center;
+    }
+
+    @include media-queries(xsmall) {
+      font-size: 1.4rem;
+    }
+  }
+}

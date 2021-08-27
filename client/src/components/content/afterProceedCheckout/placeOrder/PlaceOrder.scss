@@ -1,0 +1,166 @@
+@import "../../../../scss-variables/scss-variables.scss";
+
+@mixin buttonPlaceOrder {
+  width: 160px;
+  padding: 10px 15px;
+  border: none;
+  background-color: $btn-bgColor-confirm;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s linear;
+  text-transform: uppercase;
+
+  @include media-queries(extraMedia7) {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  &:hover {
+    background-color: $btn-bgColor-confirm--hover;
+    letter-spacing: 1px;
+  }
+}
+
+@mixin titleBar {
+  padding: 5px 0 5px 20px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+section {
+  .placeOrder {
+    width: 100%;
+
+    .placeOrder__wrapper {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas:
+        "info summary"
+        "shipping summary"
+        "payment cart"
+        "review cart";
+      column-gap: 20px;
+      row-gap: 20px;
+
+      @include media-queries(extraMedia1) {
+        grid-template-areas:
+          "info info"
+          "shipping shipping"
+          "payment payment"
+          "cart cart"
+          "summary summary"
+          "review review";
+      }
+    }
+
+    &__info {
+      grid-area: info;
+    }
+
+    &__title-info {
+      @include titleBar();
+      background-color: $firstHeader;
+
+      @include media-queries(extraMedia7) {
+        padding: 5px 20px 5px 20px;
+        font-size: 1.6rem;
+        text-align: center;
+      }
+    }
+
+    &__shipping {
+      grid-area: shipping;
+    }
+
+    &__shipDetails-method {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+
+      @include media-queries(large) {
+        flex-direction: column;
+      }
+    }
+
+    &__title-shipping {
+      @include titleBar();
+      background-color: $middleHeaders;
+      @include media-queries(extraMedia7) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__inCart {
+      grid-area: cart;
+    }
+
+    &__title-inCart {
+      @include titleBar();
+      background-color: $middleHeaders;
+      @include media-queries(extraMedia7) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__review {
+      grid-area: review;
+    }
+
+    &__title-review {
+      @include titleBar();
+      background-color: $lastHeader;
+      color: white;
+      @include media-queries(extraMedia7) {
+        padding: 5px 20px 5px 20px;
+        font-size: 1.6rem;
+        text-align: center;
+      }
+    }
+
+    &__terms {
+      padding: 10px 0 0 20px;
+      font-weight: 300;
+
+      @include media-queries(lmedium) {
+        padding: 0;
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      @include media-queries(medium) {
+        font-size: 1.4rem;
+      }
+
+      @include media-queries(extraMedia6) {
+        font-size: 1.3rem;
+      }
+    }
+
+    &__link {
+      color: firebrick;
+    }
+
+    &__review-button {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+
+      @include media-queries(extraMedia1) {
+        margin: 20px 0;
+      }
+
+      @include media-queries(lmedium) {
+        justify-content: center;
+      }
+    }
+
+    &__review-btn {
+      @include buttonPlaceOrder();
+    }
+  }
+}

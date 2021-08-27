@@ -1,0 +1,32 @@
+@import "../../../../../scss-variables/scss-variables.scss";
+
+.admin-content {
+  position: relative;
+  flex-basis: 80%;
+
+  @include media-queries(large) {
+    position: initial;
+    width: 100%;
+    flex-basis: initial;
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+
+    @include media-queries(large) {
+      width: 100%;
+      text-align: center;
+    }
+
+    @media (max-width: 823px) and (orientation: landscape) {
+      top: 18%;
+    }
+  }
+}

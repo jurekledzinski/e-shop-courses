@@ -1,0 +1,72 @@
+@import "../../../../scss-variables/scss-variables.scss";
+
+section {
+  .payment {
+    width: 65%;
+    margin: 0 auto;
+
+    @include media-queries(large) {
+      width: 90%;
+    }
+
+    @include media-queries(lmedium) {
+      margin: 0;
+    }
+
+    @include media-queries(medium) {
+      width: 100%;
+    }
+
+    &__title {
+      width: 70%;
+      margin: 0 auto 50px auto;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 15px;
+
+      @include media-queries(large) {
+        width: 79%;
+      }
+
+      @include media-queries(medium) {
+        margin: 0;
+        font-size: 2.2rem;
+      }
+
+      @include media-queries(extraMedia3) {
+        width: 100%;
+        font-size: 2rem;
+      }
+
+      @include media-queries(xsmall) {
+        font-size: 1.8rem;
+      }
+
+      @include media-queries(extrasmall) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__method {
+      display: flex;
+      width: 70%;
+      min-height: 50vh;
+      padding: 15px;
+      margin: 0 auto;
+
+      @include media-queries(large) {
+        width: 79%;
+      }
+
+      @include media-queries(lmedium) {
+        flex-direction: column-reverse;
+      }
+
+      @include media-queries(medium) {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}

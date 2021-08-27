@@ -1,0 +1,75 @@
+@import "../../../scss-variables/scss-variables.scss";
+
+section {
+  .terms-shop {
+    text-align: justify;
+    line-height: 1.6;
+
+    @include media-queries(extraMedia5) {
+      text-align: justify;
+    }
+
+    @include media-queries(medium) {
+      font-size: 1.4rem;
+    }
+
+    @include media-queries(xsmall) {
+      padding: 0 10px;
+      font-size: 1.3rem;
+      text-align: justify;
+    }
+
+    &__title {
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    &__title-strong {
+      font-weight: 500;
+    }
+
+    &__subtitle {
+      margin: 20px;
+    }
+
+    &__subtitle-strong {
+      font-weight: 500;
+
+      @include media-queries(extraMedia5) {
+        display: inline-block;
+        text-align: left;
+      }
+    }
+
+    &__text {
+      &:nth-of-type(1) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__list {
+      padding: 20px;
+      list-style-type: none;
+
+      @include media-queries(extraMedia5) {
+        text-align: left;
+      }
+
+      @include media-queries(extrasmall) {
+        padding: 20px 10px;
+      }
+    }
+
+    &__item {
+      &::before {
+        content: "✓";
+        margin-right: 10px;
+      }
+    }
+
+    &__link {
+      color: black;
+      text-decoration: none;
+    }
+  }
+}

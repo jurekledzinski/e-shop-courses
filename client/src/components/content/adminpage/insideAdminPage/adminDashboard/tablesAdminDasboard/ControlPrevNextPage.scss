@@ -1,0 +1,51 @@
+@import "../../../../../../scss-variables/scss-variables.scss";
+
+.controler-prev-next {
+  &__span {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  &__pageIndex {
+    display: inline-block;
+    font-weight: 400;
+
+    @include media-queries(large) {
+      font-size: 1.5rem;
+    }
+
+    @include media-queries(extraMedia1) {
+      margin: 10px 0 10px 0;
+    }
+  }
+
+  &__btn {
+    width: 100px;
+    padding: 10px 20px;
+    background-color: #0074d9;
+    border: none;
+    color: white;
+    outline: none;
+    transition: 0.2s linear;
+    font-weight: 300;
+
+    @include media-queries(large) {
+      padding: 8px 24px;
+    }
+
+    @include media-queries(extraMedia4) {
+      width: 70px;
+      padding: 5px 0;
+    }
+
+    &:hover {
+      background-color: #036ac4;
+      letter-spacing: 1px;
+      color: white;
+      cursor: pointer;
+    }
+    &:disabled {
+      background-color: #005096;
+      letter-spacing: 1px;
+    }
+  }
+}

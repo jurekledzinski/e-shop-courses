@@ -1,0 +1,181 @@
+@import "../../../scss-variables/scss-variables.scss";
+
+.shopping-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  padding: 5px 0;
+  margin: 10px auto;
+  background-color: #f7f7f7;
+  box-shadow: -1px 1px 25px 1px rgba(0, 0, 0, 0.2);
+
+  grid-template-areas: "image descritpion";
+
+  @include media-queries(extraMedia5) {
+    grid-template-areas:
+      "image image"
+      "descritpion descritpion";
+  }
+
+  &__image {
+    margin: 5px 10px 5px 10px;
+    grid-area: image;
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    @include media-queries(extraMedia5) {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    grid-area: descritpion;
+
+    grid-template-areas: "details1 details2";
+
+    @media (max-width: 1160px) {
+      grid-template-areas:
+        "details1 details1"
+        "details2 details2";
+      row-gap: 10px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    @include media-queries(extraMedia5) {
+      padding: 10px 10px 10px 12px;
+      justify-items: center;
+    }
+  }
+
+  &__details-1 {
+    align-items: center;
+    grid-area: details1;
+    font-size: 1.5rem;
+  }
+
+  &__details-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 30px;
+    grid-template-rows: 1fr;
+    justify-items: left;
+    align-items: center;
+    grid-area: details2;
+    font-size: 1.5rem;
+
+    @include media-queries(large) {
+      justify-items: left;
+    }
+
+    @include media-queries(xlmedium) {
+      grid-template-columns: 95px 1fr 1fr 95px 30px;
+    }
+
+    @include media-queries(lmedium) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 30px;
+    }
+
+    @include media-queries(extraMedia5) {
+      justify-items: center;
+      padding: 10px 6px;
+    }
+
+    grid-template-areas: "price qty changeQty totalPrice btnRemove";
+
+    @include media-queries(extraMedia5) {
+      grid-template-columns: 2fr auto auto;
+      grid-template-rows: 1fr 1fr 1fr;
+      column-gap: 5px;
+      row-gap: 10px;
+
+      align-items: center;
+
+      justify-items: left;
+      padding: 0 10px;
+
+      grid-template-areas:
+        "price . ."
+        "changeQty . ."
+        ". . ."
+        "totalPrice . btnRemove";
+    }
+  }
+
+  &__price {
+    color: #05c2e8;
+    grid-area: price;
+  }
+
+  &__price-span {
+    color: rgb(147, 147, 147);
+  }
+
+  &__total-qty {
+    color: #05c2e8;
+    grid-area: qty;
+
+    @include media-queries(extraMedia5) {
+      display: none;
+    }
+  }
+
+  &__total-qty-span {
+    color: rgb(147, 147, 147);
+  }
+
+  &__change-qty {
+    grid-area: changeQty;
+  }
+
+  &__input-qty {
+    min-width: 40px;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  &__btn-change-amount {
+    width: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgb(138, 138, 138);
+    transition: 0.2s linear;
+    &:hover {
+      color: #0074d9;
+      cursor: pointer;
+    }
+  }
+
+  &__total-price-item {
+    color: #05c2e8;
+    grid-area: totalPrice;
+  }
+
+  &__total-price-span {
+    color: rgb(147, 147, 147);
+  }
+
+  &__bin-remove {
+    background-color: transparent;
+    transition: 0.2s linear;
+    font-size: 1.6rem;
+    border: 0;
+    color: #ff908a;
+    outline: none;
+    grid-area: btnRemove;
+    padding: 0 0px;
+    &:hover {
+      color: #ff564d;
+      cursor: pointer;
+    }
+  }
+}
