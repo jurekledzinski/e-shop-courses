@@ -94,4 +94,4 @@ npm start - run locally
 
 ## License
 
-MIT
+MIT © [Jurek Ledziński](https://github.com/jurekledzinski)
