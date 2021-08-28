@@ -72,6 +72,7 @@ npm install in client folder
 - In app.js file in root folder, in cors origin change to http://localhost:3000
 - In package.json file in client folder, remove proxy.
 - In client/src/helpers/request.js in axios.create --- add line: baseURL: "http://localhost:5000"
+- The can appear some errors due to cookie sameSite or content security blocking after changes in browsers, so it is good to test with https protocol on localhost.
 
 ### Run application
 
