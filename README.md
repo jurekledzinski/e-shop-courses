@@ -89,6 +89,12 @@ cd ./client
 npm start - run locally
 ```
 
+#### Payments in paypal
+
+- To make payment in paypal please use this data:
+- Login: maxdoe@personal.example.com
+- Password: Maxdoe123
+
 #### See live
 
 [Course shop](https://whispering-wave-19363.herokuapp.com/)
