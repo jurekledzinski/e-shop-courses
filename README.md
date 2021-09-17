@@ -95,6 +95,13 @@ npm start - run locally
 - Login: maxdoe@personal.example.com
 - Password: Maxdoe123
 
+### Login admin
+
+- First register person can be an admin, to prevent unnecessary situations admin email is adjusted.
+
+- Email: joedoe@yahoo.com
+- Password: 123
+
 #### See live
 
 [Course shop](https://whispering-wave-19363.herokuapp.com/)
